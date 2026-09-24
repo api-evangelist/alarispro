@@ -1,23 +1,47 @@
 aid: alarispro
+
 name: AlarisPro
-description: 'AlarisPro is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'AlarisPro is a company surfaced via the API Evangelist harvest backlog (source:secondary-market) and added to the network as a stub for full-pipeline profiling. It currently has no publicly documented API endpoints, and its online presence is limited to listings on secondary market platforms. The company appears to operate in the financial services sector, offering private market data solutions, but further details are unavailable without direct contact.'
+
 url: https://raw.githubusercontent.com/api-evangelist/alarispro/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/alarispro-hosts.yml
+- type: Vendors
+  url: vendors/alarispro-vendors.yml
+- type: DomainSecurity
+  url: security/alarispro-domain-security.yml
 - type: Website
   url: https://www.nasdaqprivatemarket.com/
+
+apis: []
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 4
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
